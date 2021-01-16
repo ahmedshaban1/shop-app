@@ -5,5 +5,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.auth.presentation.RegisterActivity">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="25dp"
+                app:borderWidth="1dp"
+                app:cornerRadius="8dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/usernameET"
+                    style="@style/editTextStyle"
+                    android:hint="@string/username"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="25dp"
+                app:borderWidth="1dp"
+                app:cornerRadius="8dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/emailET"
+                    style="@style/editTextStyle"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="25dp"
+                app:borderWidth="1dp"
+                app:cornerRadius="8dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/passwordEt"
+                    style="@style/editTextStyle"
+                    android:hint="@string/password"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/signUpBtn"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
