@@ -8,10 +8,14 @@ import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
+import com.squareup.picasso.Picasso
 import java.util.*
 
 fun AppCompatActivity.showSnackbar(snackbarText: String, timeLength: Int = 2000) {
@@ -118,7 +122,39 @@ fun AppCompatActivity.validateActionBar(title: String = "") {
 }
 
 
+fun ImageView.loadImage(url: Any?) {
+    url?.let {
+        if (url is Int) {
+            Picasso.get()
+                .load(url)
+                .into(this)
 
+            setImageResource(url)
+        }
+
+
+        if (url is String)
+            Picasso.get()
+                .load(url)
+                .into(this)
+
+    }
+
+
+}
+
+
+
+fun Context.toast(message: String, duration: Int = Toast.LENGTH_SHORT) {
+    Toast.makeText(this, message, duration).show()
+}
+
+
+fun Context.getColorRes(resId: Int): Int {
+    return ContextCompat.getColor(this, resId)
+}
+
+fun Context.dp(dp: Int): Int = (dp * resources.displayMetrics.density).toInt()
 
 
 

@@ -8,9 +8,10 @@ import com.shopapp.course.helpers.openActivity
 import com.shopapp.course.screens.auth.presentation.LoginActivity
 import com.shopapp.course.screens.auth.presentation.RegisterActivity
 
-private lateinit var binding: ActivityWelcomeBinding
 
 class WelcomeActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityWelcomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
