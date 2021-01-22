@@ -22,4 +22,13 @@
         <item name="android:paddingStart">15dp</item>
         <item name="android:paddingEnd">15dp</item>
     </style>
+
+    <style name="Theme.ShopApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ShopApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ShopApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
