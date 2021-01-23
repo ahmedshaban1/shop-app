@@ -5,8 +5,136 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screens.products.presentation.ProductDetailsActivity">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Details"/>
+
+    <ImageView
+        android:id="@+id/productCover"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/p10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@color/blue_1"
+        android:fontFamily="@font/raleway_bold"
+        android:padding="10dp"
+        android:text="4.5"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/productCover"
+        app:layout_constraintStart_toEndOf="@+id/productCover"
+        app:layout_constraintTop_toTopOf="@+id/productCover"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <TextView
+        android:id="@+id/rateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Very Good"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rate"
+        app:layout_constraintStart_toEndOf="@+id/rate"
+        app:layout_constraintTop_toTopOf="@+id/rate" />
+
+    <TextView
+        android:id="@+id/priceTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="$80"
+        android:textColor="@color/blue_1"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/rate"
+        app:layout_constraintStart_toStartOf="@+id/rate"
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
+
+    <TextView
+        android:id="@+id/priceTvBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="$60"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/priceTv"
+        app:layout_constraintStart_toEndOf="@+id/priceTv"
+        app:layout_constraintTop_toTopOf="@+id/priceTv" />
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="79 Reviews"
+        android:textColor="@color/blue_1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/productCover"
+        app:layout_constraintStart_toStartOf="@+id/priceTv"
+        app:layout_constraintTop_toBottomOf="@+id/priceTv"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="Black turtleneck top"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/productCover"
+        app:layout_constraintTop_toBottomOf="@+id/productCover" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/addToCart"
+        app:layout_constraintEnd_toEndOf="@+id/titleTv"
+        app:layout_constraintStart_toStartOf="@+id/titleTv"
+        app:layout_constraintTop_toBottomOf="@+id/titleTv" />
+
+    <Button
+        android:id="@+id/addToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add to cart"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/addToFavorites"
+        app:layout_constraintEnd_toEndOf="@+id/addToFavorites"
+        app:layout_constraintStart_toStartOf="@+id/addToFavorites" />
+
+    <Button
+        android:id="@+id/addToFavorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Add to Favorites"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

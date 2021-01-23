@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopApp">
-        <activity android:name=".screens.products.presentation.ProductDetailsActivity"></activity>
+        <activity android:name=".screens.products.presentation.ProductDetailsActivity"/>
         <activity android:name=".screens.products.presentation.ProductsActivity" />
         <activity
             android:name=".screens.home.presentation.HomeActivity"
